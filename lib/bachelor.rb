@@ -19,8 +19,22 @@ winner = ""
 end
 
 def get_contestant_name(data, occupation)
-  # code here
-end
+  winner = ""
+
+    data.each do |season_num, array|
+      array.each do |hash|
+        if hash["occupation"] == occupation
+            hash.each do |key, value|
+              if key == "name"
+                winner << value
+              end
+            end
+          end
+        end
+      end
+    end
+    winner
+  end
 
 def count_contestants_by_hometown(data, hometown)
   # code here
