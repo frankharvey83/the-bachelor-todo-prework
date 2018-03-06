@@ -10,6 +10,8 @@ winner = ""
           winner << key["name":]
         binding.pry
       end
+    end
+  end
 end
 end
 end
