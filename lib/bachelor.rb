@@ -6,7 +6,9 @@ winner = ""
     if season_num == season
     array.each do |hash|
       if hash["status"] == "Winner"
-          winner << ["name"]
+          hash.each do |key, value|
+            if key == "name"
+              winner << value
         binding.pry
       end
     end
