@@ -73,11 +73,11 @@ def get_average_age_for_season(data, season)
         hash.each do |key, value|
           if key == "age"
             counter += 1
-+        ages += value.to_i
+              ages += value.to_i
           end
         end
       end
     end
   end
-
+ages
 end
