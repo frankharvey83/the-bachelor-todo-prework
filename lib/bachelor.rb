@@ -25,15 +25,14 @@ def get_contestant_name(data, occupation)
       array.each do |hash|
         if hash["occupation"] == occupation
             hash.each do |key, value|
-              binding.pry
               if key == "name"
                 winner << value
-              end
-            end
           end
         end
-        winner
       end
+    end
+  end
+      winner
 end
 
 def count_contestants_by_hometown(data, hometown)
