@@ -1,4 +1,5 @@
 require 'pry'
+
 def get_first_name_of_season_winner(data, season)
 winner = ""
 
@@ -9,12 +10,12 @@ winner = ""
           hash.each do |key, value|
             if key == "name"
               winner << value
+              end
             end
           end
         end
       end
     end
-  end
   winner.split[0]
 end
 
@@ -27,30 +28,39 @@ def get_contestant_name(data, occupation)
             hash.each do |key, value|
               if key == "name"
                 winner << value
+              end
           end
         end
       end
     end
-  end
-      winner
+  winner
 end
 
 def count_contestants_by_hometown(data, hometown)
   counter = 0
+
   data.each do |season_num, array|
     array.each do |hash|
       if hash["hometown"] == hometown
         counter += 1
+       end
      end
    end
- end
-counter
+  counter
 end
 
-
-
 def get_occupation(data, hometown)
-  # code here
+  def count_contestants_by_hometown(data, hometown)
+    data.each do |season_num, array|
+      array.each do |hash|
+        if hash["hometown"] == hometown
+          hash.each do |key, value|
+            if key == "name"
+              return value
+        end
+      end
+    end
+  end
 end
 
 def get_average_age_for_season(data, season)
