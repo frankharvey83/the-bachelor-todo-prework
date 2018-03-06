@@ -25,6 +25,7 @@ def get_contestant_name(data, occupation)
       array.each do |hash|
         if hash["occupation"] == occupation
             hash.each do |key, value|
+              binding.pry
               if key == "name"
                 winner << value
               end
