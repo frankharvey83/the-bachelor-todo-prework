@@ -9,15 +9,13 @@ winner = ""
           hash.each do |key, value|
             if key == "name"
               winner << value
-              winner.split
-              winner[0]
-            binding.pry
+              winner.split[0]
+            end
+          end
+        end
       end
     end
-end
-end
-end
-end
+  end
 end
 
 def get_contestant_name(data, occupation)
