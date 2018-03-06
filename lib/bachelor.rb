@@ -72,6 +72,7 @@ def get_average_age_for_season(data, season)
         hash.each do |key, value|
           if key == "age"
             age_array << value.to_i
+            binding.pry
         end
       end
     end
