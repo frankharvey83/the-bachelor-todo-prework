@@ -65,6 +65,7 @@ end
 
 def get_average_age_for_season(data, season)
   age_array = []
+  sum = 0
 
   data.each do |season_num, array|
     if season_num == season
@@ -72,10 +73,12 @@ def get_average_age_for_season(data, season)
         hash.each do |key, value|
           if key == "age"
             age_array << value.to_i
-            binding.pry
+              array.each { |a| sum += a }
           end
         end
       end
     end
   end
+  sum
+  binding.pry
 end
