@@ -8,8 +8,10 @@ winner = ""
       if hash["status"] == "Winner"
           hash.each do |key, value|
             if key == "name"
-              winner << value.split
-        binding.pry
+              winner << value
+              winner.split
+              winner[0]
+            binding.pry
       end
     end
 end
