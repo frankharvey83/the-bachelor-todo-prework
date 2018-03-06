@@ -7,7 +7,7 @@ winner = ""
     array.each do |hash|
       hash.each do |key, value|
         if key == "status"
-          winner << key
+          winner << value
         binding.pry
       end
     end
