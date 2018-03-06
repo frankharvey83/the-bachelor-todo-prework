@@ -56,6 +56,7 @@ def get_occupation(data, hometown)
           hash.each do |key, value|
             if key == "occupation"
               return value
+                end
               end
             end
           end
